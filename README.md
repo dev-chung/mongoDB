@@ -1,30 +1,32 @@
 # mongoDB Study
 
-1. Creat
-카테고리(?) 선택 - use [카테고리(?)명]
-삽입 - db.[DB명].insert() or insertOne / 
-ex) db.dogs.insertOne({name : "Charlie", age: 3, breed: "corgi", catFriendly : true})
-    db.dogs.insert([{name : "Wyatt", age: 14, breed: "golden", catFriendly : false}, {name : "Tonya", age: 17, breed: "chihuahua",         catFriendly : true}])
+<h2>1. Creat</h2>
+<b>카테고리(?) 선택</b> - use [카테고리(?)명] <br>
+삽입 - db.[DB명].insert() or insertOne <br>
+ex)<br>
+db.dogs.insertOne({name : "Charlie", age: 3, breed: "corgi", catFriendly : true})<br>
+db.dogs.insert([{name : "Wyatt", age: 14, breed: "golden", catFriendly : false}, {name : "Tonya", age: 17, breed: "chihuahua",        catFriendly : true}])
 
-2. Read
-찾기 - db.[DB명].find() or findOne()
-ex) db.dogs.find()
-    db.dogs.find({ name : "Charlie"})
-    db.dogs.findOne({ name : "Charlie"})
+<h2>2. Read</h2>
+<b>찾기</b> - db.[DB명].find() or findOne() <br>
+ex) <br>
+db.dogs.find()<br>
+db.dogs.find({ name : "Charlie"})<br>
+db.dogs.findOne({ name : "Charlie"})<br>
     
-3. Update
-업데이트 - db.[DB명].updateOne({ [업데이트 대상] } , {$set : {업데이트 내용}})
-ex) db.dogs.updateOne({ name : "Charlie" } , {$set : { age : 4 }})
+<h2>3. Update</h2>
+<b>업데이트</b> - db.[DB명].updateOne({ [업데이트 대상] } , {$set : {업데이트 내용}})<br>
+ex) db.dogs.updateOne({ name : "Charlie" } , {$set : { age : 4 }})<br>
 
-다중 업데이트 - db.[DB명].updateMany({ [업데이트 대상] } , {$set : {업데이트 내용}})
-ex) db.dogs.updateMany({ catFriendly : true } , {$set : {isAvailable : false}})
+<b>다중 업데이트</b> - db.[DB명].updateMany({ [업데이트 대상] } , {$set : {업데이트 내용}})<br>
+ex) db.dogs.updateMany({ catFriendly : true } , {$set : {isAvailable : false}})<br>
 
-수정 일자 - $currentDate : {lastChanged: true} (현재 날짜를 수정일로 넣는다.)
-ex) db.dogs.updateMany({ catFriendly : true } , {$set : {isAvailable : false} $currentDate : {lastChanged: true}})
+<b>수정 일자</b> - $currentDate : {lastChanged: true} (현재 날짜를 수정일로 넣는다.)<br>
+ex) db.dogs.updateMany({ catFriendly : true } , {$set : {isAvailable : false} $currentDate : {lastChanged: true}})<br>
 
-3. Deleted
-삭제 - db.[DB명].deleteOne({ [대상] })
-ex) db.dogs.deleteOne({ name : "Charlie" })
+<h2>3. Deleted</h2>
+<b>삭제</b> - db.[DB명].deleteOne({ [대상] })<br>
+ex) db.dogs.deleteOne({ name : "Charlie" })<br>
 
-다중 삭제 - db.[DB명].deleteMany({ [대상] }) ( ({}) = 아무것도 넣지 않으면 전체 삭제)
-ex) db.dogs.deleteMany({ isAvailable : false })
+<b>다중 삭제</b> - db.[DB명].deleteMany({ [대상] }) ( ({}) = 아무것도 넣지 않으면 전체 삭제)<br>
+ex) db.dogs.deleteMany({ isAvailable : false })<br>
